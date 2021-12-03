@@ -41,25 +41,25 @@ public class Day2 {
         System.out.println("Submarine coordinates: " + "\n-> Horizontal: " + horizontal + "\n-> Depth: " + depth + "\n\nEnd result: " + result);
 
         //Part Two
-        AtomicInteger depth2 = new AtomicInteger();
         AtomicInteger horizontal2 = new AtomicInteger();
         AtomicInteger aim = new AtomicInteger();
         AtomicInteger currentHorizontal = new AtomicInteger();
+        AtomicInteger position = new AtomicInteger();
 
         coordinates.forEach(coor -> {
             if (Objects.equals(coor.getDirection(), "down")) {
                 aim.addAndGet(coor.getAmount());
-                depth2.addAndGet(currentHorizontal.get() * aim.get());
             } else if (Objects.equals(coor.getDirection(), "up")) {
                 aim.addAndGet(-coor.getAmount());
-                depth2.addAndGet(-currentHorizontal.get() * aim.get());
             } else {
                 currentHorizontal.set(coor.getAmount());
                 horizontal2.addAndGet(coor.getAmount());
+
+                position.set(position.get() + (aim.get() * currentHorizontal.get()));
             }
-            // System.out.println(depth2);
         });
-        int result2 = depth2.get() * horizontal2.get();
-        System.out.println("\nSubmarine coordinates: " + "\n-> Horizontal: " + horizontal2 + "\n-> Depth: " + depth2 + "\n\nEnd result: " + result2);
+
+        int result2 = position.get() * horizontal2.get();
+        System.out.println("\nSubmarine coordinates: " + "\n-> Horizontal: " + horizontal2 + "\n-> Depth: " + position + "\n\nEnd result: " + result2);
     }
 }
