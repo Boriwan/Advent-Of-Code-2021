@@ -1,4 +1,4 @@
-package Day2;
+package day_2;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Day2 {
     public static void main(String[] args) throws IOException {
         //Part One
-        BufferedReader reader = new BufferedReader(new FileReader("Day2/day_two.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("day_2/day_two.txt"));
 
         ArrayList<Coordinates> coordinates = new ArrayList<>();
 

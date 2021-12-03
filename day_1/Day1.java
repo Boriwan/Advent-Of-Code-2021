@@ -1,4 +1,4 @@
-package Day1;
+package day_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Day1 {
     public static void main(String[] args) throws FileNotFoundException {
         //Part One
-        Scanner sc = new Scanner(new File("Day1/day_one.txt"));
+        Scanner sc = new Scanner(new File("day_1/day_one.txt"));
         ArrayList<Integer> coors = new ArrayList<>();
         int counter = 0;
 
@@ -24,7 +24,7 @@ public class Day1 {
         System.out.println("There are " + counter + " measurements that larger than the previous measurement.");
 
         //Part Two
-        Scanner sc2 = new Scanner(new File("Day1/day_one_p2.txt"));
+        Scanner sc2 = new Scanner(new File("day_1/day_one_p2.txt"));
         ArrayList<Integer> coors2 = new ArrayList<>();
         int counter2 = 0;
         while (sc2.hasNextInt()) {

@@ -1,4 +1,4 @@
-package Day2;
+package day_2;
 
 public record Coordinates(String direction, int amount) {
 
